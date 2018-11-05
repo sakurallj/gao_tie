@@ -1,0 +1,13 @@
+{
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff",
+    "navigationBarTitleText": "高铁线路图",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "footer": "/components/footer/footer",
+        "map_line": "/components/map_line/map_line",
+        "lpicker": "/components/lpicker/lpicker"
+    }
+}

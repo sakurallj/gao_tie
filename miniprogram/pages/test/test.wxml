@@ -1,0 +1,5 @@
+<view class="container">
+    <view bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+        <image src="cloud://release-8a6e13.7265-release-8a6e13/1111111.png" style="    transform: scale({{touch.scale}});  " bindload="bindload"></image>
+    </view>
+</view>

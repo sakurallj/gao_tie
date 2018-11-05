@@ -1,0 +1,48 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx657ae4801983ed40",
+	"projectname": "gao_tie",
+	"libVersion": "2.3.2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "scenic",
+					"pathName": "pages/scenic/scenic",
+					"query": "item={\"key\":\"scenic\",\"title\":\"景点\",\"station\":{\"title\":\"长沙南\",\"longitude\":113.065494,\"latitude\":28.147104}}"
+				}
+			]
+		}
+	}
+}

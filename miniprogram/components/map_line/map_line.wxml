@@ -1,0 +1,116 @@
+<view class="page-container" bindtouchmove="touchmoveCallback" bindtouchstart="touchstartCallback">
+    <scroll-view scroll-with-animation="true"  scroll-x="true" scroll-y="true" class="pf pf1 w0 h0" data-page-no="1" style='height:{{sysInfo.windowHeight}}px'>
+        <view class="pc pc1 w0  " style="transform: scale({{ touch.scale }}) ">
+            <image bindload='bindload' binderror="binderror" class="bi x0 y0 w1 h1" alt="" src="cloud://release-8a6e13.7265-release-8a6e13/test.png"></image>
+            <view class="c x0 y1 w2 h2">
+                <view class="t m0 x1 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname1</view>
+                <view class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname2</view>
+                <view class="t m0 x3 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname3</view>
+                <view class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname4</view>
+                <view class="t m0 x5 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname5</view>
+                <view class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname6</view>
+                <view class="t m1 x7 h3 y3 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname7</view>
+                <view class="t m2 x8 h3 y4 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname8</view>
+                <view class="t m3 x9 h3 y5 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname9</view>
+                <view class="t m3 x5 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname11</view>
+                <view class="t m4 xa h3 y7 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname22</view>
+                <view class="t m5 xb h3 y8 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname33</view>
+                <view class="t m6 x4 h4 y9 ff1 fs2 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname44</view>
+                <view class="t m0 xc h3 ya ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname55</view>
+                <view class="t m0 xd h3 yb ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname66</view>
+                <view class="t m0 xe h3 yc ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname77</view>
+                <view class="t m0 xe h3 yd ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname88</view>
+                <view class="t m0 xe h3 ye ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname99</view>
+                <view class="t m0 xe h3 yf ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname00</view>
+                <view class="t m1 xf h3 y10 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationa</view>
+                <view class="t m0 x10 h3 y11 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameq</view>
+                <view class="t m0 x2 h3 y12 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamew</view>
+                <view class="t m0 x3 h3 y12 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamee</view>
+                <view class="t m2 x11 h4 y13 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamer</view>
+                <view class="t m2 x6 h4 y14 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamet</view>
+                <view class="t m2 x12 h4 y15 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamey</view>
+                <view class="t m1 x13 h3 y16 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameu</view>
+                <view class="t m1 x14 h3 y17 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamei</view>
+                <view class="t m1 x15 h3 y17 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameo</view>
+                <view class="t m2 x16 h4 y14 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnames</view>
+                <view class="t m2 x17 h4 y18 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamed</view>
+                <view class="t m3 x18 h3 y19 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationf</view>
+                <view class="t m7 x19 h4 y1a ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameg</view>
+                <view class="t m2 x15 h4 y1b ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameh</view>
+                <view class="t m2 x1a h4 y1c ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamej</view>
+                <view class="t m2 x1a h4 y1d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamek</view>
+                <view class="t m2 x1b h4 y1e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamel</view>
+                <view class="t m0 x1c h3 y1f ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamez</view>
+                <view class="t m0 x1d h3 y1f ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamex</view>
+                <view class="t m0 x1e h3 y1f ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamec</view>
+                <view class="t m0 x1f h3 y1f ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamev</view>
+                <view class="t m0 x20 h3 y1f ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnameb</view>
+                <view class="t m2 x21 h4 y20 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamen</view>
+                <view class="t m2 x21 h4 y21 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationnamem</view>
+                <view class="t m2 x21 h4 y22 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname12</view>
+                <view class="t m2 x21 h4 y23 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname13</view>
+                <view class="t m2 x22 h4 y24 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname14</view>
+                <view class="t m0 x23 h3 y25 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname15</view>
+                <view class="t m0 x24 h3 y26 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname16</view>
+                <view class="t m0 x25 h3 y26 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname17</view>
+                <view class="t m0 x26 h3 y26 ff1 fs0 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname23</view>
+                <view class="t m2 x27 h4 y27 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname24</view>
+                <view class="t m2 x28 h4 y28 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname25</view>
+                <view class="t m2 x29 h4 y29 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname26</view>
+                <view class="t m2 x2a h4 y2a ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname27</view>
+                <view class="t m2 x2b h4 y2b ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname28</view>
+                <view class="t m2 x2c h4 y2c ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname29</view>
+                <view class="t m2 x18 h4 y2d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname43</view>
+                <view class="t m2 x2d h4 y2e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname45</view>
+                <view class="t m2 x2e h4 y2f ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname46</view>
+                <view class="t m2 x2f h4 y30 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname47</view>
+                <view class="t m2 x2f h4 y31 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname48</view>
+                <view class="t m2 x2f h4 y32 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname49</view>
+                <view class="t m2 x30 h4 y2a ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname40</view>
+                <view class="t m2 x31 h4 y33 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname32</view>
+                <view class="t m2 x7 h4 y34 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname31</view>
+                <view class="t m2 x32 h4 y35 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname34</view>
+                <view class="t m2 x33 h4 y36 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname35</view>
+                <view class="t m2 x34 h4 y37 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname36</view>
+                <view class="t m2 x16 h4 y38 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname37</view>
+                <view class="t m2 x35 h4 y39 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname38</view>
+                <view class="t m2 x36 h4 y2a ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname39</view>
+                <view class="t m2 x37 h4 y3a ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname30</view>
+                <view class="t m2 x37 h4 y3b ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname54</view>
+                <view class="t m8 x38 h4 y3c ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname53</view>
+                <view class="t m8 x39 h4 y3d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname52</view>
+                <view class="t m8 x3a h4 y3d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname51</view>
+                <view class="t m8 x3b h4 y3d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname56</view>
+                <view class="t m8 x3c h4 y3d ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname57</view>
+                <view class="t m8 x1e h4 y3e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname58</view>
+                <view class="t m8 x1f h4 y3e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname59</view>
+                <view class="t m8 x20 h4 y3e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname50</view>
+                <view class="t m8 x3d h4 y3e ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname65</view>
+                <view class="t m2 x15 h4 y39 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname64</view>
+                <view class="t m9 x23 h5 y3f ff1 fs3 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname63</view>
+                <view class="t ma x3e h5 y40 ff1 fs2 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname62</view>
+                <view class="t mb x3f h3 y41 ff1 fs4 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname61</view>
+                <view class="t mc x40 h3 y42 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname67</view>
+                <view class="t md x41 h5 y43 ff1 fs3 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname68</view>
+                <view class="t m2 x42 h4 y44 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname69</view>
+                <view class="t m2 x43 h4 y45 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname60</view>
+                <view class="t m2 x44 h4 y46 ff1 fs1 fc0 sc0 ls0 ws0" bindtap='chooseStation'>Stationname78</view>
+                <view class="t m2 x45 h4 y47 ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L1</view>
+                <view class="t m2 x46 h4 y1c ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L2</view>
+                <view class="t m2 x47 h4 y20 ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L3</view>
+                <view class="t m2 x48 h4 y48 ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L5</view>
+                <view class="t m2 x49 h4 y49 ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L4</view>
+                <view class="t m2 x4a h4 y4a ff1 fs1 fc1 sc0 ls0 ws0" bindtap='chooseStation'>L6</view>
+            </view>
+        </view>
+        <view class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></view>
+    </scroll-view>
+</view>
+<view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>

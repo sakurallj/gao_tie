@@ -1,0 +1,23 @@
+<view class='footer {{isIphoneX?"footer_iphone_x":""}}'>
+    <form class="cell left {{activeIndex==1?'active':''}}"  bindsubmit="clickCell"  data-index="1" report-submit="true">
+        <button class='btn'  formType="submit">
+            <image class="img cell_img " src="/images/map_active.png" wx:if="{{activeIndex==1}}"></image>
+            <image class="img cell_img  " src="/images/map.png" wx:else></image>
+            <view class="cell_text ">线路</view>
+        </button>
+    </form>
+    <form class="cell left  {{activeIndex==2?'active':''}}"  bindsubmit="clickCell"  data-index="2" report-submit="true">
+        <button class='btn'   formType="submit">
+            <image class="img cell_img" src="/images/near_active.png" wx:if="{{activeIndex==2}}"></image>
+            <image class="img cell_img " src="/images/near.png" wx:else></image>
+            <view class="cell_text ">附近</view>
+        </button>
+    </form>
+    <form class="cell left  {{activeIndex==3?'active':''}}"  bindsubmit="clickCell"  data-index="3" report-submit="true">
+        <button class='btn' formType="submit">
+            <image class="img cell_img" src="/images/me_active.png" wx:if="{{activeIndex==3}}"></image>
+            <image class="img cell_img " src="/images/me.png" wx:else></image>
+            <view class="cell_text ">我的</view>
+        </button>
+    </form>
+</view>

@@ -1,0 +1,3 @@
+<map_line id="map_line" bind:chooseStation="chooseStation"></map_line>
+<lpicker id="lpicker" pickerData="{{pickerData}}" bind:cancelEvent="cancelLPickerEvent" bind:chooseOption="chooseOption"></lpicker>
+<footer class="page_footer" id="footer" activeIndex="1"></footer>

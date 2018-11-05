@@ -1,0 +1,3 @@
+<view bindtap='showLPicker'>sssss</view>
+<lpicker id="lpicker" pickerData="{{pickerData}}"  bind:cancelEvent="cancelLPickerEvent" ></lpicker>
+<footer class="page_footer" id="footer" activeIndex="3"></footer>

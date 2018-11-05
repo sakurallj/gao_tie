@@ -1,0 +1,11 @@
+<!--  wx:if="{{isShow}}"  -->
+<view class='picker {{isShow?"":"hide"}}'>
+    <view class="wx_mask"></view>
+    <view class='picker_container' style='transform: translate(0,{{pickerContainerHeight}}px)' animation="{{showAnimation}}">
+        <view class='picker_container_option'>
+            <view class='title'>{{pickerData.title}}</view>
+            <view class='option' wx:for="{{pickerData.options}}" catchtap='choose' data-item="{{item}}">{{item.title}}</view>
+        </view>
+        <view class='bottom' bindtap='_cancelEvent'>取消</view>
+    </view>
+</view>

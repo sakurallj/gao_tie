@@ -1,0 +1,60 @@
+.wx_mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.hide {
+    display: none;
+}
+.picker {
+    height: 100hv;
+    width: 750rpx;
+}
+
+.picker_container {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    width: 718rpx;
+    margin-left: 16rpx;
+    margin-bottom: 16rpx;
+    text-align: center;
+}
+
+.picker_container_option {
+    background: #fff;
+    border-radius: 16rpx;
+}
+
+.title {
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 26rpx;
+    color: #c9c9c8;
+}
+
+.option {
+    height: 115rpx;
+    line-height: 115rpx;
+    font-size: 40rpx;
+    color: #3377f6;
+    border-top: 1px solid #dedede;
+}
+
+.bottom {
+    height: 115rpx;
+    line-height: 115rpx;
+    font-size: 40rpx;
+    color: #3377f6;
+    margin-top: 16rpx;
+    background: #fff;
+    border-radius: 16rpx;
+}
+
+ 

@@ -1,0 +1,86 @@
+.clear_both {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.clear_both:before, .clear_both:after {
+    content: " ";
+    display: table;
+}
+
+.clear_both:after {
+    clear: both;
+}
+.btn {
+    background: none;
+    overflow: visible;
+}
+
+.btn:after {
+    display: none;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.footer {
+    width: 750rpx;
+    height: 98rpx;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 0rpx 20rpx rgba(0, 0, 0, 0.2);
+    /* padding-top: 11rpx; */
+}
+
+.footer_iphone_x {
+    height: 130rpx;
+}
+
+.cell {
+    width: 33.33%;
+    /* width: 50%;  */
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cell_img {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.img_80 {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: -20rpx;
+}
+
+.img_100 {
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: -38rpx;
+}
+
+.cell_text {
+    font-size: 20rpx;
+    color: #cdcdcd;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.cell.active .cell_text {
+    color: #333333;
+}
