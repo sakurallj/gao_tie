@@ -11,6 +11,7 @@
 .hide {
     display: none;
 }
+
 .picker {
     height: 100hv;
     width: 750rpx;
@@ -56,5 +57,3 @@
     background: #fff;
     border-radius: 16rpx;
 }
-
- 

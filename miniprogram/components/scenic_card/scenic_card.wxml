@@ -1,0 +1,32 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper' circular="{{circular}}" bindchange="swiperChange">
+    <swiper-item wx:for="{{componentData}}">
+        <view class='scenic_card'>
+            <view class='title_container'>
+                <view class='title_flag'></view>
+                <view class='title left cut '>{{item.name}}</view>
+                <view class='rating_gap left'></view>
+                <view class='rating left'>
+                    <text class='hightline'>{{item.rating/100}}</text>
+                    <text>/5分</text>
+                </view>
+                <view class='clear_both'></view>
+            </view>
+            <view class='desc'>
+                <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
+            </view>
+            <view class='info'>
+                <view class='info_item' wx:for="{{item.poi_extend.basic_info_list}}" wx:for-item="itemBaseInfo">
+                    <view class='info_item_title left'> {{itemBaseInfo.data.title}} </view>
+                    <view class='info_item_desc cut left'>{{itemBaseInfo.data.subtitle}} </view>
+                    <view class='clear_both'></view>
+                </view>
+            </view>
+            <view class='address'>
+                <view class='address_title left'> 地址 </view>
+                <view class='address_desc cut left'>{{item.cityname}}{{item.adname}}{{item.name}}</view>
+                <image class="address_thumbnail right" src="/images/address_thumbnail.png" mode="scaleToFill"></image>
+                <view class='clear_both'></view>
+            </view>
+        </view>
+    </swiper-item>
+</swiper>

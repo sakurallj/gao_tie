@@ -1,8 +1,10 @@
 {
-    "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "backgroundColor": "#fff",
     "navigationBarTitleText": "景点",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "scenic_card": "/components/scenic_card/scenic_card"
+    }
 }

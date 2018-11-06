@@ -1,34 +1,4 @@
-.clear_both {
-    clear: both;
-    height: 0;
-    line-height: 0;
-    font-size: 0;
-}
-
-.clear_both:before, .clear_both:after {
-    content: " ";
-    display: table;
-}
-
-.clear_both:after {
-    clear: both;
-}
-.btn {
-    background: none;
-    overflow: visible;
-}
-
-.btn:after {
-    display: none;
-}
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
-}
+@import "../../public/css/common.wxss";
 
 .footer {
     width: 750rpx;

@@ -1,1 +1,3 @@
-<map id="map" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="12" controls="{{map.controls}}" bindcontroltap="controltap" markers="{{map.markers}}" bindmarkertap="markertap" polyline="{{map.polyline}}" bindregionchange="regionchange" show-location style="width: 750rpx; height: 750rpx;"></map>
+<map id="map" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="12" controls="{{map.controls}}" bindcontroltap="controltap" markers="{{map.markers}}" bindmarkertap="markertap" polyline="{{map.polyline}}" bindregionchange="regionchange"
+    show-location style="width: 750rpx; height: 600rpx;"></map>
+<scenic_card id="scenic_card" componentData="{{scenicCardData}}" bind:cancelEvent="cancelScenicCardEvent" bind:scenicCardChange="scenicCardChange"></scenic_card>
