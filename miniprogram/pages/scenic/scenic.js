@@ -1,6 +1,7 @@
 let that;
 let app = getApp();
 let apis = app.apis;
+let utils = app.utils;
 const ZINDEX_SCENIC = 1000;
 const ZINDEX_SCENIC_ACTIVE = 1001;
 Page({
@@ -20,6 +21,9 @@ Page({
         if (typeof item != "object") {
             return false;
         }
+        that.setData({
+            scenic: item
+        });
         if (item.key == "scenic") {
             this.loadScenic(item);
         }
@@ -34,6 +38,7 @@ Page({
                 width: 20,
                 height: 20
             }];
+        //计算距离
         for (let i = 0; i < len; i++) {
             let s = markers[i];
             data[data.length] = {
@@ -57,17 +62,12 @@ Page({
         });
         let scenics = apis.getScenic(item.station),
             len = scenics.length;
+        for (let i = 0; i < len; i++) {
+            scenics[i].distance = utils.calculateDistanceTwoLTPoint(item.station, scenics[i]);
+        }
         let map = that.data.map;
         map.longitude = item.station.longitude;
         map.latitude = item.station.latitude;
-        map.markers = [{
-            iconPath: "/images/station_flag.png",
-            id: 0,
-            latitude: map.latitude,
-            longitude: map.longitude,
-            width: 20,
-            height: 20
-        }];
         map.markers = this.createMarkersData(0, item.station, scenics);
         that.setData({
             scenicCardData: scenics,
@@ -81,10 +81,32 @@ Page({
         console.log(res);
         let index = res.detail.index,
             map = that.data.map,
-            scenicCardData = that.data.scenicCardData;
-        map.markers = this.createMarkersData(index, map, scenicCardData);
+            scenicCardData = that.data.scenicCardData,
+            scenic = that.data.scenic;
+        map.longitude = scenicCardData[index].longitude;
+        map.latitude = scenicCardData[index].latitude;
+        map.markers = this.createMarkersData(index, scenic.station, scenicCardData);
+        map.polyline = this.createPolyline([
+            scenic.station,
+            scenicCardData[index]
+        ]);
         that.setData({
             map: map
         });
+    },
+    createPolyline(points) {
+        let len = points.length,
+            polyline = [];
+        for (let i = 0; i < len; i++) {
+            let point = points[i];
+            polyline[polyline.length] = {
+                longitude: point.longitude,
+                latitude: point.latitude
+            }
+        }
+        polyline.color = "#FF0000DD";
+        polyline.width = 2;
+        polyline.dottedLine = true;
+        return polyline;
     }
 })

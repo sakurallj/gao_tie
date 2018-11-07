@@ -16,7 +16,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-        indicatorDots: true,
+        indicatorDots: false,
         autoplay: false,
         interval: 0,
         duration: 0,
