@@ -11,6 +11,14 @@
                 </view>
                 <view class='clear_both'></view>
             </view>
+            <view class='sub_tips'>
+                <view class='sub_tips_item left' wxif="{{!!item.distance}}">
+                    <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
+                    <view class="sub_tips_desc left">{{item.distance}}km</view>
+                    <view class='clear_both'></view>
+                </view>
+                <view class='clear_both'></view>
+            </view>
             <view class='desc'>
                 <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
             </view>

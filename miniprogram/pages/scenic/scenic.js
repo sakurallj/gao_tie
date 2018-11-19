@@ -61,14 +61,18 @@ Page({
             title: item.station.title,
         });
         let scenics = apis.getScenic(item.station),
-            len = scenics.length;
+            len = scenics.length, scenic = that.data.scenic;
         for (let i = 0; i < len; i++) {
-            scenics[i].distance = utils.calculateDistanceTwoLTPoint(item.station, scenics[i]);
+            scenics[i].distance = utils.calculateDistanceTwoLTPoint(item.station, scenics[i]).toFixed(1);
         }
         let map = that.data.map;
         map.longitude = item.station.longitude;
         map.latitude = item.station.latitude;
         map.markers = this.createMarkersData(0, item.station, scenics);
+        map.polyline = [this.createOnePolyline([
+            scenic.station,
+            scenics[0]
+        ])];
         that.setData({
             scenicCardData: scenics,
             map: map
@@ -86,27 +90,29 @@ Page({
         map.longitude = scenicCardData[index].longitude;
         map.latitude = scenicCardData[index].latitude;
         map.markers = this.createMarkersData(index, scenic.station, scenicCardData);
-        map.polyline = this.createPolyline([
+        map.polyline = [this.createOnePolyline([
             scenic.station,
             scenicCardData[index]
-        ]);
+        ])];
         that.setData({
             map: map
         });
     },
-    createPolyline(points) {
+    createOnePolyline(points) {
         let len = points.length,
-            polyline = [];
+            polyline = {
+                points: [],
+                color: "#FF0000DD",
+                width: 2,
+                dottedLine: true
+            };
         for (let i = 0; i < len; i++) {
             let point = points[i];
-            polyline[polyline.length] = {
+            polyline.points[polyline.points.length] = {
                 longitude: point.longitude,
                 latitude: point.latitude
             }
         }
-        polyline.color = "#FF0000DD";
-        polyline.width = 2;
-        polyline.dottedLine = true;
         return polyline;
     }
 })

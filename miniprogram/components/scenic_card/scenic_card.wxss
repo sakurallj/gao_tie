@@ -111,3 +111,14 @@
     margin-left: 30rpx;
     width: 520rpx;
 }
+
+.sub_tips_img {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.sub_tips_desc {
+    margin-left: 10rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
+}
