@@ -6,7 +6,8 @@ const ZINDEX_SCENIC = 1000;
 const ZINDEX_SCENIC_ACTIVE = 1001;
 Page({
     data: {
-        map: {}
+        map: {},
+        showMap:true
     },
     onLoad: function(options) {
         console.log(options);
@@ -114,5 +115,14 @@ Page({
             }
         }
         return polyline;
+    },
+    showSecenicList(){
+        that.setData({
+            showMap:false
+        });
+    }, hideSecenicList(){
+        that.setData({
+            showMap: true
+        });
     }
 })

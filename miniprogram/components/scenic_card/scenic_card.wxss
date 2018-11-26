@@ -122,3 +122,101 @@
     line-height: 30rpx;
     font-size: 26rpx;
 }
+
+.show_type_img {
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    width: 50rpx;
+    height: 50rpx;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.card_container {
+    position: relative;
+}
+
+.swiper_tool {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 24rpx;
+}
+
+.swiper_tool_container {
+    background: #ededed;
+    display: inline-block;
+    font-size: 24rpx;
+    opacity: 0.6;
+    border-radius: 24rpx;
+    line-height: 45rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+.scenic_list_item {
+    height: 255rpx;
+    padding: 17.5rpx 30rpx;
+    margin-bottom: 20rpx;
+    box-shadow: 0 0 20rpx 0 rgba(232, 224, 216, 0.8);
+    box-sizing: border-box;
+}
+
+.thumbnail_img {
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 15rpx;
+}
+
+.scenic_list_item_right {
+    margin-left: 20rpx;
+}
+
+.scenic_list_item_title {
+    font-size: 37rpx;
+    width: 434rpx;
+    line-height: 80rpx;
+}
+
+.scenic_list_item_rating {
+    font-size: 26rpx;
+    color: #646464;
+}
+
+.scenic_list_item_rating  .hightline {
+    color: #f19979;
+    font-size: 30rpx;
+    font-weight: 600;
+    line-height: 30rpx;
+}
+
+.scenic_list_item_desc {
+    width: 434rpx;
+    margin-top: 15rpx;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    color: #5b5d5e;
+    height: 80rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.list_container {
+    padding-bottom: 50rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.close_img {
+    width: 50rpx;
+    height: 50rpx;
+    position: fixed;
+    right: 10rpx;
+    top: 10rpx;
+}

@@ -20,7 +20,9 @@ Component({
         autoplay: false,
         interval: 0,
         duration: 0,
-        circular: true
+        circular: true,
+        isShowList: false,
+        index: 0,
     },
 
     /**
@@ -31,10 +33,27 @@ Component({
             console.log(e);
             let current = e.detail.current,
                 componentData = this.data.componentData;
+                this.setData({
+                    index: current
+                });
             this.triggerEvent("scenicCardChange", {
                 index: current,
                 item: componentData[current]
             });
-        }
+        },
+        showList: function() {
+            console.log("111");
+            this.setData({
+                isShowList: true
+            });
+            this.triggerEvent("showList" );
+        },
+        hideList: function () {
+            console.log("111");
+            this.setData({
+                isShowList: false
+            });
+            this.triggerEvent("hideList");
+        },
     }
 })
