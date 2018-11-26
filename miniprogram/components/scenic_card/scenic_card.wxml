@@ -1,4 +1,4 @@
-<view class='list_container' wx:if="{{isShowList}}">
+<view class='list_container {{isShowList?"":"hide"}} ' >
     <image class="close_img left" src="/images/close.png"  bindtap='hideList'></image>
     <view wx:for="{{componentData}}">
         <view class='scenic_list_item'>
@@ -24,7 +24,7 @@
         </view>
     </view>
 </view>
-<view class='card_container' wx:else>
+<view class='card_container {{isShowList?"hide":""}} ' >
     <image class="show_type_img left" src="/images/list.png" bindtap='showList'></image>
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper' circular="{{circular}}" bindchange="swiperChange">
         <swiper-item wx:for="{{componentData}}">
