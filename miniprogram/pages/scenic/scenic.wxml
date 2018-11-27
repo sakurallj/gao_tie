@@ -1,4 +1,4 @@
 <map id="map" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="12" controls="{{map.controls}}" bindcontroltap="controltap" markers="{{map.markers}}" bindmarkertap="markertap" polyline="{{map.polyline}}" bindregionchange="regionchange"
     show-location style="width: 750rpx; height: 600rpx;" wx:if="{{showMap}}"></map>
 <scenic_card id="scenic_card" componentData="{{scenicCardData}}" bind:cancelEvent="cancelScenicCardEvent" 
-bind:scenicCardChange="scenicCardChange" bind:showList="showSecenicList"  bind:hideList="hideSecenicList"></scenic_card>
+bind:scenicCardChange="scenicCardChange" bind:showList="showSecenicList"  bind:hideList="hideSecenicList" bind:showDetail="showSecenicDetail" bind:hideDetail="hideSecenicDetail"></scenic_card>

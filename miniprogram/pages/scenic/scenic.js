@@ -7,7 +7,7 @@ const ZINDEX_SCENIC_ACTIVE = 1001;
 Page({
     data: {
         map: {},
-        showMap:true
+        showMap: true
     },
     onLoad: function(options) {
         console.log(options);
@@ -62,7 +62,8 @@ Page({
             title: item.station.title,
         });
         let scenics = apis.getScenic(item.station),
-            len = scenics.length, scenic = that.data.scenic;
+            len = scenics.length,
+            scenic = that.data.scenic;
         for (let i = 0; i < len; i++) {
             scenics[i].distance = utils.calculateDistanceTwoLTPoint(item.station, scenics[i]).toFixed(1);
         }
@@ -116,13 +117,27 @@ Page({
         }
         return polyline;
     },
-    showSecenicList(){
+    showSecenicList() {
         that.setData({
-            showMap:false
+            isShowSecenicList:true,
+            showMap: false
         });
-    }, hideSecenicList(){
+    },
+    hideSecenicList() {
         that.setData({
+            isShowSecenicList: false,
             showMap: true
+        });
+    },
+    showSecenicDetail() {
+        that.setData({
+            showMap: false
+        });
+    },
+    hideSecenicDetail() {
+        let isShowSecenicList = that.data.isShowSecenicList;
+        that.setData({
+            showMap: isShowSecenicList?false:true
         });
     }
 })

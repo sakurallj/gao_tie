@@ -1,2 +1,46 @@
-<!--components/scenic_detail/scenic_detail.wxml-->
-<text>components/scenic_detail/scenic_detail.wxml</text>
+<view class="close_img_out" bindtap='hideDetail'>
+    <image class="close_img  " src="/images/go_back_1.png"></image>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="swiperChange">
+    <block wx:for="{{componentData.photos}}">
+        <swiper-item>
+            <image src="{{item.url}}" class="swiper_img" catchtap='preview'></image>
+        </swiper-item>
+    </block>
+</swiper>
+<view class='scenic_card' catchtap="showDetail" data-item="{{componentData}}">
+    <view class='title_container'>
+        <view class='title_flag'></view>
+        <view class='title left cut '>{{componentData.name}}</view>
+        <view class='rating_gap left'></view>
+        <view class='rating left'>
+            <text class='hightline'>{{componentData.rating/100}}</text>
+            <text>/5分</text>
+        </view>
+        <view class='clear_both'></view>
+    </view>
+    <view class='sub_tips'>
+        <view class='sub_tips_item left' wxif="{{!!componentData.distance}}">
+            <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
+            <view class="sub_tips_desc left">{{componentData.distance}}km</view>
+            <view class='clear_both'></view>
+        </view>
+        <view class='clear_both'></view>
+    </view>
+    <view class='desc'>
+        <view wx:for="{{componentData.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
+    </view>
+    <view class='info'>
+        <view class='info_item' wx:for="{{componentData.poi_extend.basic_info_list}}" wx:for-item="itemBaseInfo">
+            <view class='info_item_title left'> {{itemBaseInfo.data.title}} </view>
+            <view class='info_item_desc cut left'>{{itemBaseInfo.data.subtitle}} </view>
+            <view class='clear_both'></view>
+        </view>
+    </view>
+    <view class='address'>
+        <view class='address_title left'> 地址 </view>
+        <view class='address_desc cut left'>{{componentData.cityname}}{{componentData.adname}}{{componentData.name}}</view>
+        <image class="address_thumbnail right" src="/images/address_thumbnail.png" mode="scaleToFill"></image>
+        <view class='clear_both'></view>
+    </view>
+</view>

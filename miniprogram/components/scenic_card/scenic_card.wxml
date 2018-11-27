@@ -1,75 +1,80 @@
-<view class='list_container {{isShowList?"":"hide"}} ' >
-    <image class="close_img left" src="/images/close.png"  bindtap='hideList'></image>
-    <view wx:for="{{componentData}}">
-        <view class='scenic_list_item'>
-            <image class="thumbnail_img left" src="{{item.photos[0].url}}"></image>
-            <view class="scenic_list_item_right  left">
-                <view class='scenic_list_item_title   cut '>{{item.name}}</view>
-                <view>
-                    <view class='sub_tips_item left' wxif="{{!!item.distance}}">
-                        <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
-                        <view class="sub_tips_desc left">{{item.distance}}km</view>
+<view class=' {{isShowDetail?"hide":""}} '>
+    <view class='list_container {{isShowList?"":"hide"}} '>
+        <image class="close_img left" src="/images/close.png" bindtap='hideList'></image>
+        <view wx:for="{{componentData}}"  catchtap="showDetail" data-item="{{item}}">
+            <view class='scenic_list_item'>
+                <image class="thumbnail_img left" src="{{item.photos[0].url}}"></image>
+                <view class="scenic_list_item_right  left">
+                    <view class='scenic_list_item_title   cut '>{{item.name}}</view>
+                    <view>
+                        <view class='sub_tips_item left' wxif="{{!!item.distance}}">
+                            <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
+                            <view class="sub_tips_desc left">{{item.distance}}km</view>
+                            <view class='clear_both'></view>
+                        </view>
+                        <view class='scenic_list_item_rating right '>
+                            <text class='hightline'>{{item.rating/100}}</text>
+                            <text>/5分</text>
+                        </view>
                         <view class='clear_both'></view>
                     </view>
-                    <view class='scenic_list_item_rating right '>
-                        <text class='hightline'>{{item.rating/100}}</text>
-                        <text>/5分</text>
+                    <view class='scenic_list_item_desc'>
+                        <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
                     </view>
-                    <view class='clear_both'></view>
                 </view>
-                <view class='scenic_list_item_desc'>
-                    <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='card_container {{isShowList?"hide":""}} '>
+        <image class="show_type_img left" src="/images/list.png" bindtap='showList'></image>
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper' circular="{{circular}}" bindchange="swiperChange">
+            <swiper-item wx:for="{{componentData}}">
+                <view class='scenic_card' catchtap="showDetail" data-item="{{item}}">
+                    <view class='title_container'>
+                        <view class='title_flag'></view>
+                        <view class='title left cut '>{{item.name}}</view>
+                        <view class='rating_gap left'></view>
+                        <view class='rating left'>
+                            <text class='hightline'>{{item.rating/100}}</text>
+                            <text>/5分</text>
+                        </view>
+                        <view class='clear_both'></view>
+                    </view>
+                    <view class='sub_tips'>
+                        <view class='sub_tips_item left' wxif="{{!!item.distance}}">
+                            <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
+                            <view class="sub_tips_desc left">{{item.distance}}km</view>
+                            <view class='clear_both'></view>
+                        </view>
+                        <view class='clear_both'></view>
+                    </view>
+                    <view class='desc'>
+                        <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
+                    </view>
+                    <view class='info'>
+                        <view class='info_item' wx:for="{{item.poi_extend.basic_info_list}}" wx:for-item="itemBaseInfo">
+                            <view class='info_item_title left'> {{itemBaseInfo.data.title}} </view>
+                            <view class='info_item_desc cut left'>{{itemBaseInfo.data.subtitle}} </view>
+                            <view class='clear_both'></view>
+                        </view>
+                    </view>
+                    <view class='address'>
+                        <view class='address_title left'> 地址 </view>
+                        <view class='address_desc cut left'>{{item.cityname}}{{item.adname}}{{item.name}}</view>
+                        <image class="address_thumbnail right" src="/images/address_thumbnail.png" mode="scaleToFill"></image>
+                        <view class='clear_both'></view>
+                    </view>
                 </view>
+            </swiper-item>
+        </swiper>
+        <view class='swiper_tool'>
+            <view class='swiper_tool_container'>
+                <text>{{index+1}}</text>
+                <text>/{{componentData.length}}</text>
             </view>
         </view>
     </view>
 </view>
-<view class='card_container {{isShowList?"hide":""}} ' >
-    <image class="show_type_img left" src="/images/list.png" bindtap='showList'></image>
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper' circular="{{circular}}" bindchange="swiperChange">
-        <swiper-item wx:for="{{componentData}}">
-            <view class='scenic_card'>
-                <view class='title_container'>
-                    <view class='title_flag'></view>
-                    <view class='title left cut '>{{item.name}}</view>
-                    <view class='rating_gap left'></view>
-                    <view class='rating left'>
-                        <text class='hightline'>{{item.rating/100}}</text>
-                        <text>/5分</text>
-                    </view>
-                    <view class='clear_both'></view>
-                </view>
-                <view class='sub_tips'>
-                    <view class='sub_tips_item left' wxif="{{!!item.distance}}">
-                        <image class="sub_tips_img left" src="/images/distance_blue.png" mode="scaleToFill"></image>
-                        <view class="sub_tips_desc left">{{item.distance}}km</view>
-                        <view class='clear_both'></view>
-                    </view>
-                    <view class='clear_both'></view>
-                </view>
-                <view class='desc'>
-                    <view wx:for="{{item.poi_extend.desc}}" wx:for-item="itemDesc">{{itemDesc}}</view>
-                </view>
-                <view class='info'>
-                    <view class='info_item' wx:for="{{item.poi_extend.basic_info_list}}" wx:for-item="itemBaseInfo">
-                        <view class='info_item_title left'> {{itemBaseInfo.data.title}} </view>
-                        <view class='info_item_desc cut left'>{{itemBaseInfo.data.subtitle}} </view>
-                        <view class='clear_both'></view>
-                    </view>
-                </view>
-                <view class='address'>
-                    <view class='address_title left'> 地址 </view>
-                    <view class='address_desc cut left'>{{item.cityname}}{{item.adname}}{{item.name}}</view>
-                    <image class="address_thumbnail right" src="/images/address_thumbnail.png" mode="scaleToFill"></image>
-                    <view class='clear_both'></view>
-                </view>
-            </view>
-        </swiper-item>
-    </swiper>
-    <view class='swiper_tool'>
-        <view class='swiper_tool_container'>
-            <text>{{index+1}}</text>
-            <text>/{{componentData.length}}</text>
-        </view>
-    </view>
+<view class=' {{isShowDetail?"":"hide"}} ' wx:if="{{!!detailInfo}}">
+    <scenic_detail id="scenic_detail" componentData="{{detailInfo}}" bind:cancelEvent="cancelScenicDetailEvent" bind:scenicCardChange="scenicDetailChange" bind:hideDetail="hideDetailCom"></scenic_detail>
 </view>

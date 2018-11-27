@@ -10,7 +10,18 @@ Component({
         }
     },
     ready() {
-        console.log(this.data.componentData);
+        console.log("scenic_card>>>", this.data.componentData);
+        this.setData({
+            detailInfo: this.data.componentData[0]
+        });
+        let e={
+            currentTarget:{
+                dataset:{
+                    item: this.data.componentData[0]
+                }
+            }
+        }
+        this.showDetail(e);
     },
     /**
      * 组件的初始数据
@@ -22,7 +33,9 @@ Component({
         duration: 0,
         circular: true,
         isShowList: false,
+        isShowDetail: false,
         index: 0,
+        detailInfo: {}
     },
 
     /**
@@ -33,9 +46,9 @@ Component({
             console.log(e);
             let current = e.detail.current,
                 componentData = this.data.componentData;
-                this.setData({
-                    index: current
-                });
+            this.setData({
+                index: current
+            });
             this.triggerEvent("scenicCardChange", {
                 index: current,
                 item: componentData[current]
@@ -46,14 +59,38 @@ Component({
             this.setData({
                 isShowList: true
             });
-            this.triggerEvent("showList" );
+            this.triggerEvent("showList");
         },
-        hideList: function () {
+        hideList: function() {
             console.log("111");
             this.setData({
                 isShowList: false
             });
             this.triggerEvent("hideList");
         },
+        showDetail: function(e) {
+            console.log(e);
+            let item = e.currentTarget.dataset.item;
+            if (!item) {
+                wx.showToast({
+                    title: '请重试',
+                    icon: "none",
+                    duration: 2e3
+                })
+                return false;
+            }
+            this.setData({
+                isShowDetail:true,
+                detailInfo: item
+            });
+            this.triggerEvent("showDetail");
+        },
+        hideDetailCom(){
+            this.setData({
+                isShowDetail: false,
+                detailInfo: null
+            });
+            this.triggerEvent("hideDetail");
+        }
     }
 })

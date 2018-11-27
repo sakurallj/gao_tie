@@ -1,1 +1,160 @@
-/* components/scenic_detail/scenic_detail.wxss */
+@import "../../public/css/common.wxss";
+
+swiper {
+    width: 750rpx;
+    height: 495rpx;
+}
+
+.swiper_img {
+    width: 750rpx;
+    height: 495rpx;
+}
+
+.scenic_card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32rpx;
+    position: relative;
+}
+
+.title {
+    font-size: 55rpx;
+    font-weight: 800;
+    width: 507rpx;
+    line-height: 76rpx;
+    color: #333;
+}
+
+.title_flag {
+    width: 11rpx;
+    height: 48rpx;
+    background: #f9e060;
+    border-top-right-radius: 6rpx;
+    border-bottom-right-radius: 20rpx;
+    position: absolute;
+    top: 48.5rpx;
+    left: 0;
+}
+
+.rating_gap {
+    height: 76rpx;
+    width: 1px;
+    background: #dedede;
+}
+
+.rating {
+    line-height: 76rpx;
+    text-align: center;
+    width: 176rpx;
+    font-size: 27rpx;
+    color: #646464;
+}
+
+.rating  .hightline {
+    color: #f19979;
+    font-size: 40rpx;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 40rpx;
+    font-size: 34rpx;
+    line-height: 54rpx;
+    color: #5b5d5e;
+    width: 688rpx;
+    height: 108rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.info {
+    margin-top: 40rpx;
+}
+
+.info_item {
+    font-size: 27rpx;
+    margin-bottom: 30rpx;
+}
+
+.info_item_title {
+    font-weight: 600;
+    width: 112rpx;
+}
+
+.info_item_desc {
+    width: 495rpx;
+    margin-left: 30rpx;
+    color: #5b5d5e;
+}
+
+.address {
+    border-top: 1px solid #e5e7e9;
+    box-sizing: border-box;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    font-size: 27rpx;
+    line-height: 76rpx;
+}
+
+.address_thumbnail {
+    width: 76rpx;
+    height: 76rpx;
+    border-radius: 76rpx;
+}
+
+.address_title {
+    font-weight: 600;
+    color: #333;
+}
+
+.address_desc {
+    color: #5b5d5e;
+    margin-left: 30rpx;
+    width: 520rpx;
+}
+
+.sub_tips_img {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.sub_tips_desc {
+    margin-left: 10rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
+}
+
+.show_type_img {
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    width: 50rpx;
+    height: 50rpx;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.card_container {
+    position: relative;
+}
+
+.close_img_out {
+    width: 100rpx;
+    height: 100rpx;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* opacity: 0.8; */
+    z-index: 1000;
+    /* border: 1px solid red; */
+}
+
+.close_img {
+    width: 50rpx;
+    height: 50rpx;
+    padding: 25rpx;
+}
